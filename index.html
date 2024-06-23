@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-----icons link----->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-----icons link----->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  </head>
+  <body>
+    <div class="all-content">
+        <nav class="navbar navbar-expand-lg" id="navbar">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#" id="logo">Cafeto!</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fa-solid fa-bars" style="color: white; font-size: 23px;"> </i> </span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#menu">Menu</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#product">Products</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact us</a>
+                </li>
+
+                <li class="nav-item">
+                    <div class="nav">
+                        <div class="box" >
+                          <div class="cart-count">0</div>
+                          <ion-icon name="cart"  id="cart-icon" ></ion-icon>
+                        </div>
+                  
+                        <div class="cart">
+                          <div class="cart-title">Cart Items</div>
+                          <div class="cart-content">
+                 
+                          
+                        <div class="total">
+                          <div class="total-title">Total</div>
+                          <div class="total-price">Rs.0</div>
+                        </div>
+                  
+                        <button class="btn-buy" onclick="place()" id="place">Place Order</button>
+                  
+                        <ion-icon name="close" id="cart-close"></ion-icon>
+                        
+                  
+                        </div>
+                    </div>
+                </li>
+                </ul>     
+            </div>
+            </div>
+        </nav>
+
+     
+
+        
+        <!-----home page---->
+        <section id="home">
+            <div class="content">
+                <h3>Just Brew Happiness In a Cup!</h3>
+                <p>Unlock Your Coffee Journey From Bean to Cup,Experience the Perfect Brew. <br>
+                    Let Every Sip Transport You to a World of Rich Aromas and Bold Flavors.</p>
+            </div>
+        </section>
+
+
+        <!----------about page-------->
+        <section id="about">
+            <div class="container">
+                <div class="heading">About <span> Us </span> </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <img src=" coffee-cup-beans.jpg" alt="">
+                            </div>
+                        </div>
+                    
+
+                        <div class="col-md-6">
+                            <div class="main" style="font-weight: bold; font-size: 25px;">Welcome to Cafeto: Crafted with Passion</div>
+                                <p> Welcome to Cafeto, where every sip tells a story and every bean is a journey. We're a passionate team of coffee aficionados on a mission to redefine the coffee experience, one cup at a time. With a dedication to quality, sustainability, and innovation, we're excited to introduce you to the future of coffee.<br> <br>
+                                  Cafeto was born out of a desire to bring exceptional coffee to the world. Inspired by our love for the bean and a commitment to ethical sourcing, we embarked on a journey to create a brand that celebrates the artistry and craftsmanship of coffee culture.
+                                </p>
+                            <!-- <button id="about-btn">Learn more</button> -->
+                            <input type=button id="about-btn" onClick="parent.location='learnmore.html'"value='Learn more'>
+                        </div>
+                    </div>
+            </div>
+        </section>
+
+
+        <!----------top card start------->
+        <section id="top-cards">
+            <div class="heading2">Top <span>Catagories</span></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 py-3">
+                        <div class="card">
+                            <img src=" rqyhuff6clhj4wpwei9l5b0chbcjqyvxoeuojqbzjpg_181624-60296.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 py-3">
+                        <div class="card">
+                            <img src=" glass-tasty-latte-with-love-art-wooden-table-coffee-shop.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 py-3">
+                        <div class="card">
+                            <img src=" iced-coffee-tall-glass-with-cream-topped-with-iced-coffee-decorated-with-coffee-beans.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!---------menu start--------->
+
+        <section id="menu">
+
+          <div class="container">
+            <div class="heading3">Menu</div>
+            
+              <div class="shop-content">
+                  
+                <div class="food-box">
+                  <div class="pic">
+                    <img src=" menu9.jpg" class="food-img">
+                  </div>
+                  <h2 class="food-title">Latte</h2>
+                  <span class="food-price">Rs.190</span>
+                  <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                </div>
+          
+          
+                <div class="food-box">
+                  <div class="pic"><img src=" menu5.jpg" class="food-img"></div>
+                  <h2 class="food-title">Black Coffee</h2>
+                  <span class="food-price">Rs.110</span>
+                  <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                </div>
+            
+                <div class="food-box">
+                  <div class="pic"><img src=" menu7.jpg" class="food-img"></div>
+                  <h2 class="food-title">Cold Brew</h2>
+                  <span class="food-price">Rs.280</span>
+                  <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                </div>
+            
+                <div class="food-box">
+                  <div class="pic"><img src=" menu1.jpg" class="food-img"></div>
+                  <h2 class="food-title">Affogato</h2>
+                  <span class="food-price">Rs.249</span>
+                  <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                </div>
+            
+                <div class="food-box">
+                  <div class="pic"><img src=" menu16.jpg" class="food-img"></div>
+                  <h2 class="food-title">White forth</h2>
+                  <span class="food-price">Rs.165</span>
+                  <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                </div>
+            
+                <div class="food-box">
+                  <div class="pic"><img src=" menu3.jpg" class="food-img"></div>
+                  <h2 class="food-title">Frappuccino (Mini)</h2>
+                  <span class="food-price">Rs.150</span>
+                  <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                </div>
+            
+            
+                <div class="food-box">
+                  <div class="pic"><img src=" menu6.jpeg" class="food-img"></div>
+                  <h2 class="food-title">South-Indian Coffee</h2>
+                  <span class="food-price">Rs.40</span>
+                  <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                </div>
+            
+            
+                <div class="food-box">
+                  <div class="pic"><img src=" menu2.jpg" class="food-img"></div>
+                  <h2 class="food-title">Frappuccino (Large)</h2>
+                  <span class="food-price">Rs.210</span>
+                  <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                </div>
+
+                <div class="food-box">
+                  <div class="pic"><img src=" menu12.jpg" class="food-img"></div>
+                  <h2 class="food-title">Cappuccino</h2>
+                  <span class="food-price">Rs.225</span>
+                  <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                </div>
+
+                <div class="food-box">
+                  <div class="pic"><img src=" menu13..jpg" class="food-img"></div>
+                  <h2 class="food-title">Vannila Crused Latte</h2>
+                  <span class="food-price">Rs.205</span>
+                  <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                </div>
+
+                <div class="food-box">
+                  <div class="pic"><img src=" chocolate-smoothie.jpg" class="food-img"></div>
+                  <h2 class="food-title">Choclate Coffee</h2>
+                  <span class="food-price">Rs.315</span>
+                  <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                </div>
+
+                <div class="food-box">
+                  <div class="pic"><img src=" menu14.jpg" class="food-img"></div>
+                  <h2 class="food-title">Ice-creame Latte</h2>
+                  <span class="food-price">Rs.255</span>
+                  <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                </div>
+
+                <div class="food-box">
+                  <div class="pic"><img src=" menu4.jpg" class="food-img"></div>
+                  <h2 class="food-title">Choclate Forth</h2>
+                  <span class="food-price">Rs.195</span>
+                  <ion-icon name="cart" class="add-cart"></ion-icon>
+                </div>
+
+                <div class="food-box">
+                  <div class="pic"><img src=" menu17.jpg" class="food-img"></div>
+                  <h2 class="food-title">Mint Coffee</h2>
+                  <span class="food-price">Rs.99</span>
+                  <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                </div>
+
+                <div class="food-box">
+                  <div class="pic"><img src=" cortado.jpg" class="food-img"></div>
+                  <h2 class="food-title">Creamy Latte</h2>
+                  <span class="food-price">Rs.265</span>
+                  <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                </div>
+
+                <div class="food-box">
+                  <div class="pic"><img src=" flat white.jpg" class="food-img"></div>
+                  <h2 class="food-title">Hazelnut Cappuccino</h2>
+                  <span class="food-price">Rs.355</span>
+                  <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                </div>
+
+
+                
+
+
+              </div>
+            </div>
+        
+
+        </section>
+
+
+        <!-----------products------->
+
+        <section id="product">
+
+          <div class="container">
+            <div class="heading4">Products</div>
+            
+              <div class="shop-content1">
+
+                    <div class="food-box1">
+                      <div class="pic"><img src=" Screenshot_7.png" class="food-img"></div>
+                      <h2 class="food-title">Beachville</h2>
+                      <span class="food-price">Rs.299</span>
+                      <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                    </div>
+
+                    <div class="food-box1">
+                      <div class="pic"><img src=" Screenshot_6.png" class="food-img"></div>
+                      <h2 class="food-title">Korebi</h2>
+                      <span class="food-price">Rs.165</span>
+                      <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                    </div>
+
+                    <div class="food-box1">
+                      <div class="pic"><img src=" Screenshot_1.png" class="food-img"></div>
+                      <h2 class="food-title">Coffeeza Forte</h2>
+                      <span class="food-price">Rs.305</span>
+                      <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                    </div>
+
+                    <div class="food-box1">
+                      <div class="pic"><img src=" Screenshot_3.png" class="food-img"></div>
+                      <h2 class="food-title">Coffeeza Mango Marvel</h2>
+                      <span class="food-price">Rs.335</span>
+                      <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                    </div>
+
+                    <div class="food-box1">
+                      <div class="pic"><img src=" Screenshot_8.png" class="food-img"></div>
+                      <h2 class="food-title">Africa Coffee</h2>
+                      <span class="food-price">Rs.499</span>
+                      <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                    </div>
+
+                    <div class="food-box1">
+                      <div class="pic"><img src=" Screenshot_9.png" class="food-img"></div>
+                      <h2 class="food-title">Madras Coffee</h2>
+                      <span class="food-price">Rs.349</span>
+                      <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                    </div>
+
+                    <div class="food-box1">
+                      <div class="pic"><img src=" Screenshot_10.png" class="food-img"></div>
+                      <h2 class="food-title">Culture Coffee</h2>
+                      <span class="food-price">Rs.249</span>
+                      <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                    </div>
+
+                    <div class="food-box1">
+                      <div class="pic"><img src=" Screenshot_11.png" class="food-img"></div>
+                      <h2 class="food-title">House Blend</h2>
+                      <span class="food-price">Rs.365</span>
+                      <ion-icon name="cart" class="add-cart" onclick="carts()"></ion-icon>
+                    </div>
+                
+              </div>
+            </div>
+        </section>
+          
+
+
+        <!--------contact form------>
+
+        <section id="contact">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-7">
+                      <br> 
+                      <h1>CONTACT FORM</h1>
+                      <form
+                      name="RegForm"
+                      onsubmit="return validateForm()">
+                      <p>
+                        <label for="name">Name:</label>
+                        <input
+                        type="text"
+                        id="name"
+                        name="Name"
+                        placeholder="Enter your full name"/>
+                        <span
+                        id="name-error"
+                        class="error-message"
+                        ></span>
+                      </p>
+                      <p>
+                        <label for="address"
+                        >Address:</label
+                        >
+                        <input
+                        type="text"
+                        id="address"
+                        name="Address"
+                        placeholder="Enter your address"
+                        />
+                        <span
+                        id="address-error"
+                        class="error-message"
+                        ></span>
+                      </p>
+                      <p>
+                        <label for="email"
+                        >E-mail Address:</label
+                        >
+                        <input
+                        type="text"
+                        id="email"
+                        name="EMail"
+                        placeholder="Enter your email"
+                        />
+                        <span
+                        id="email-error"
+                        class="error-message"
+                        ></span>
+                      </p>      
+                      <p>
+                        <input
+                        type="checkbox"
+                        id="agree"
+                        name="Agree"
+                        />
+                        <label for="agree"
+                        >I agree to the above
+                        information</label
+                        >
+                        <span
+                        id="agree-error"
+                        class="error-message"
+                        ></span>
+                      </p>
+                      <p>
+                        <input
+                        type="submit"
+                        value="Send"
+                        name="Submit"
+                        onclick="send()"
+                        />
+                        <input
+                        type="reset"
+                        value="Reset"
+                        name="Reset"
+                        />
+                      </p>
+                      </form>
+                    </div>
+
+                    <div class="col-md-5"> 
+                    <center> 
+                      <div> 
+                        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30530.69953770621!2d82.21413788459961!3d16.957944080708597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a38286b25c48623%3A0x4fccfa36e1c55f6a!2sCaf%C3%A9%20Coffee%20Day!5e0!3m2!1sen!2sin!4v1715411322448!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </div> 
+                    </center> 
+                  </div>
+                </div>
+                <script src="submit.js"></script>
+              </section>
+
+        <!-----------footer start--------->
+        <footer id="footer">
+            <div class="social-links text-center">
+                <a href="https://wa.me/1234567892" target="_blank">
+                  <i class="fab fa-whatsapp" style="font-size: 16px; color: green;"></i>
+                </a>
+                <a href="https://www.instagram.com/cafeto_coffee_shop/" target="_blank">
+                  <i class="fab fa-instagram" style="font-size: 16px; color: #C13584;"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCcafeto_coffee_shop" target="_blank">
+                  <i class="fab fa-youtube" style="font-size: 16px; color: #FF0000;"></i>
+                </a>
+              </div>
+
+            <div class="credits text-center">
+                Designed by <span style="color: black; font-weight: bold;"> Sk.Rufiya</span>
+            </div>
+
+            <div class="copyrights text-center">
+                &copy; copyright <strong style="color: black; font-weight: bold;">Cafeto</strong> All Rights Reserved
+            </div>
+        </footer>
+    </div>
+  
+    <script src="script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
